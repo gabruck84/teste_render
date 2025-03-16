@@ -10,13 +10,14 @@ app = Flask(__name__)
 def test_selenium():
     # Configuração do WebDriver
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")  # Rodar sem abrir a janela do navegador
+    options.add_argument("--headless")
+   options.add_argument("--incognito")# Rodar sem abrir a janela do navegador
 
     # Iniciar o WebDriver com o ChromeDriver gerenciado pelo webdriver-manager
     driver = webdriver.Chrome(options=options)
 
     # Abrir a página
-    driver.get("https://example.com")
+    driver.get("https://google.com")
 
     # Verificar se o título da página contém 'Example Domain'
     page_title = driver.title
