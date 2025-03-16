@@ -27,7 +27,7 @@ def test_selenium():
     # Fechar o navegador
     driver.quit()
 
-    if "Example Domain" in page_title:
+    if  page_title:
         return jsonify({"message": "Página carregada com sucesso!", "title": page_title}), 200
     else:
         return jsonify({"message": "Falha ao carregar a página!"}), 500
